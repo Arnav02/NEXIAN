@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXIAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="one">
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="images/nexian logo.png" class="logo" alt=""></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just a phone<br>It's <span>NEXIAN</span></h2>
+                <p>The Nexian phone delivers excellence in each frame. Transform your onscreen experience with a 90 Hz
+                    fluid display for seamless scrolling. And with a super low response latency, swiping is believing!
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="images/phn blue3.png" alt="" class="phone">
+                <span id="caption">Forbidden Blue</span>
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="images/phn blue3.png"
+                    onclick="imgSlider('images/phn blue3.png');changeCircleColor('darkblue');changeSpanColor('#5b6dd1');changeButtonBg('#5b6dd1');changeBodyBg('#abebff');changeTextColor('#333');changeCaptionText('Forbidden Blue');changeCaptionColor('#abebff')">
+            </li>
+            <li><img src="images/phn black3.png"
+                    onclick="imgSlider('images/phn black3.png');changeCircleColor('#636363');changeSpanColor('#fff');changeButtonBg('#000');changeBodyBg('#ababab');changeTextColor('black');changeCaptionText('Aurora Black');changeCaptionColor('#000')">
+            </li>
+            <li><img src="images/phn gold3.png"
+                    onclick="imgSlider('images/phn gold3.png');changeCircleColor('goldenrod');changeSpanColor('#ffbb00');changeButtonBg('#ffbb00');changeBodyBg('#fffbb5');changeTextColor('#333');changeCaptionText('Premium Gold');changeCaptionColor('#d90000')">
+            </li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <section class="two">
+        <video controls>
+            <source src="images/Nexian Commercial.mp4" type="video/mp4">
+            <source src="images/Nexian Commercial.ogg" type="video/ogg">
+        </video>
+    </section>
+
+    <section class="three">
+        <div class="content">
+            <img src="images/Thumbnail transparent.png" alt="">
+            <div class="phnDescription"><span id="processor">Snapdragon 870</span> rockets past every other smartphone
+                processor. And
+                Ceramic shield
+                delivers
+                four times better drop performance.
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.phone').src = anything;
+        }
+
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+        function changeTextColor(color) {
+            const text = document.querySelector('.textBox p');
+            text.style.color = color;
+        }
+
+        function changeSpanColor(color) {
+            const text = document.querySelector('span');
+            text.style.color = color;
+        }
+
+        function changeButtonBg(color) {
+            const button = document.querySelector('.textBox a');
+            button.style.backgroundColor = color;
+        }
+
+        function changeBodyBg(color) {
+            const background = document.querySelector('section');
+            background.style.backgroundColor = color;
+        }
+
+        function changeCaptionText(text) {
+            const caption = document.getElementById('caption');
+            caption.innerHTML = text;
+        }
+
+        function changeCaptionColor(color) {
+            const caption = document.getElementById('caption');
+            caption.style.color = color;
+        }
+    </script>
+</body>
+
+</html>
